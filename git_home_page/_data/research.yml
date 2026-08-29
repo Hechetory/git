@@ -1,16 +1,11 @@
 introduction: >-
-  My current interests center on p-adic numbers and the geometry built around
-  them. I am especially curious about how algebra, geometry, and number theory
+  My current interests center on the p-adic geometry. I am especially curious about how analysis, algebra, geometry, and number theory
   meet in the p-adic setting.
 
 interests:
-  - title: p-adic numbers
-    description: >-
-      Their arithmetic, topology, and the distinctive notion of distance they
-      introduce.
   - title: p-adic geometry
     description: >-
-      Geometric spaces and analytic ideas developed over p-adic fields.
-  - title: Arithmetic geometry
+      Rigid spaces, formal schemes, perfectoid spaces and their applications to arithmetic problems.
+  - title: formal groups
     description: >-
-      Connections between number-theoretic questions and geometric methods.
+      The p-adic upper half plane acting as a moduli space parametrizeing some special p-divisible groups.

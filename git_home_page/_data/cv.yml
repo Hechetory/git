@@ -1,7 +1,7 @@
 description: >-
-  A concise record of my education, research, teaching, and academic activities.
+  A concise record of my education, research, and academic activities.
 
 # Put the PDF in assets/pdfs, then set this to its path, for example:
 # pdf: /assets/pdfs/xiaobo-feng-cv.pdf
-pdf: ""
-updated: ""
+pdf: "/assets/pdfs/CV.pdf"
+updated: 2026-08-29

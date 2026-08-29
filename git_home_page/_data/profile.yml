@@ -1,5 +1,5 @@
 name: Xiaobo Feng
-monogram: XF
+monogram: XbF
 field: Mathematics
 institution: Fudan University
 email: ""
@@ -9,8 +9,7 @@ introduction: >-
   include p-adic geometry and, more broadly, anything related to p-adic numbers.
 
 about: >-
-  I enjoy finding concrete examples for abstract ideas and writing notes that
-  make advanced mathematics more approachable to students.
+  In this year, I will focus on reading the p-adic notes written by P.Scholze and J.Weinstein.
 
 facts:
   - label: Status
@@ -20,4 +19,4 @@ facts:
   - label: School
     value: School of Mathematical Sciences
   - label: Interests
-    value: p-adic geometry and p-adic numbers
+    value: p-adic geometry
