@@ -23,6 +23,25 @@ pdf: "/assets/pdfs/etale-cohomology-notes.pdf"
 Do not include `published: false` in the new file. Jekyll automatically sorts
 notes newest first and adds the entry to the Notes section.
 
+## Write mathematical formulas
+
+MathJax is enabled across the site. Use dollar signs for inline mathematics:
+
+```text
+I am interested in $p$-adic geometry and $\mathbb{Q}_p$.
+```
+
+Use double dollar signs for a displayed formula:
+
+```text
+$$
+H^i(X, \mathbb{Q}_p)
+$$
+```
+
+These forms work in YAML text fields and Markdown files. To write an ordinary
+dollar sign rather than mathematics, escape it as `\$`.
+
 ## Update education
 
 Edit `_data/education.yml`. Each item has the same structure:
@@ -71,7 +90,7 @@ tools. Then open PowerShell in this project folder and run:
 ```powershell
 gem install bundler
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl ""
 ```
 
 Open `http://127.0.0.1:4000/`. Keep the last command running while editing;

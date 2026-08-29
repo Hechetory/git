@@ -6,10 +6,10 @@ email: ""
 
 introduction: >-
   I am an undergraduate mathematics student at Fudan University. My interests
-  include p-adic geometry and, more broadly, anything related to p-adic numbers.
+  include $p$-adic geometry and, more broadly, anything related to $p$-adic numbers.
 
 about: >-
-  In this year, I will focus on reading the p-adic notes written by P.Scholze and J.Weinstein.
+  In this year, I will focus on reading the $p$-adic notes written by P.Scholze and J.Weinstein.
 
 facts:
   - label: Status
@@ -19,4 +19,4 @@ facts:
   - label: School
     value: School of Mathematical Sciences
   - label: Interests
-    value: p-adic geometry
+    value: $p$-adic geometry

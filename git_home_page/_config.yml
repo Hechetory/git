@@ -1,10 +1,10 @@
 title: "Xiaobo Feng | Mathematics"
 description: "Academic homepage of Xiaobo Feng, an undergraduate mathematics student at Fudan University."
 
-# GitHub Pages fills in url/baseurl automatically during the Actions build.
-# Keeping them empty also makes local preview work at http://127.0.0.1:4000/.
-baseurl: ""
-url: ""
+# This repository is published at https://hechetory.github.io/git/.
+# If the GitHub repository is renamed, update baseurl to the new repository name.
+baseurl: "/git"
+url: "https://hechetory.github.io"
 
 markdown: kramdown
 timezone: Asia/Shanghai
