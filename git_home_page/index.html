@@ -1,0 +1,181 @@
+---
+layout: default
+---
+
+{% assign profile = site.data.profile %}
+
+<section id="home" class="hero container" aria-labelledby="intro-title">
+  <div>
+    <p class="eyebrow">{{ profile.field }} · {{ profile.institution }}</p>
+    <h1 id="intro-title">{{ profile.name }}</h1>
+    <p class="lead">{{ profile.introduction }}</p>
+    <p>{{ profile.about }}</p>
+    <div class="contact-links" aria-label="Contact links">
+      {% if profile.email and profile.email != "" %}
+        <a href="mailto:{{ profile.email }}">Email</a>
+      {% endif %}
+      <a href="#publications">Publications</a>
+      <a href="#notes">Notes</a>
+    </div>
+  </div>
+
+  <aside class="profile-card" aria-label="Academic information">
+    <div class="monogram" aria-hidden="true">{{ profile.monogram }}</div>
+    <dl>
+      {% for item in profile.facts %}
+        <div>
+          <dt>{{ item.label }}</dt>
+          <dd>{{ item.value }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  </aside>
+</section>
+
+<section id="education" class="section section-tinted">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">01</p>
+      <h2>Education</h2>
+    </div>
+    <div class="section-content">
+      <ol class="education-list">
+        {% for item in site.data.education %}
+          <li>
+            <p class="meta">{{ item.period }}</p>
+            <div>
+              <h3>{{ item.institution }}</h3>
+              <p>{{ item.degree }}{% if item.field %}, {{ item.field }}{% endif %}</p>
+              {% if item.description and item.description != "" %}<p class="meta">{{ item.description }}</p>{% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">02</p>
+      <h2>Research</h2>
+    </div>
+    <div class="section-content">
+      <p class="section-intro">{{ site.data.research.introduction }}</p>
+      <div class="topic-grid">
+        {% for interest in site.data.research.interests %}
+          <article>
+            <h3>{{ interest.title }}</h3>
+            <p>{{ interest.description }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section section-tinted">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">03</p>
+      <h2>Publications</h2>
+    </div>
+    <div class="section-content">
+      {% assign publications = site.publications | sort: "year" | reverse %}
+      {% if publications.size > 0 %}
+        <ol class="publication-list">
+          {% for publication in publications %}
+            <li>
+              <p class="publication-title">{{ publication.title }}</p>
+              <p>{{ publication.authors }}</p>
+              <p class="meta">
+                {% if publication.venue and publication.venue != "" %}{{ publication.venue }}, {% endif %}{{ publication.year }}
+                {% if publication.arxiv and publication.arxiv != "" %} · <a href="{{ publication.arxiv }}">arXiv</a>{% endif %}
+                {% if publication.pdf and publication.pdf != "" %} · <a href="{{ publication.pdf | relative_url }}">PDF</a>{% endif %}
+              </p>
+              {% if publication.description and publication.description != "" %}<p>{{ publication.description }}</p>{% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p class="empty-state">Publications and preprints will appear here.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="notes" class="section">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">04</p>
+      <h2>Notes</h2>
+    </div>
+    <div class="section-content notes-list">
+      {% assign notes = site.notes | sort: "date" | reverse %}
+      {% if notes.size > 0 %}
+        {% for note in notes %}
+          <article>
+            <div>
+              <h3>{{ note.title }}</h3>
+              <p>{{ note.description }}</p>
+              <p class="meta">{{ note.date | date: "%B %Y" }}</p>
+            </div>
+            {% if note.pdf and note.pdf != "" %}<a href="{{ note.pdf | relative_url }}" aria-label="Download {{ note.title }}">PDF</a>{% endif %}
+          </article>
+        {% endfor %}
+      {% else %}
+        <p class="empty-state">Lecture notes and expository writing will appear here.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="talks" class="section section-tinted">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">05</p>
+      <h2>Talks</h2>
+    </div>
+    <div class="section-content">
+      {% assign talks = site.talks | sort: "date" | reverse %}
+      {% if talks.size > 0 %}
+        <ol class="talk-list">
+          {% for talk in talks %}
+            <li>
+              <p class="meta">{{ talk.date | date: "%B %Y" }}</p>
+              <div>
+                <h3>{{ talk.title }}</h3>
+                <p>{{ talk.event }}{% if talk.location and talk.location != "" %} · {{ talk.location }}{% endif %}</p>
+                {% if talk.description and talk.description != "" %}<p class="meta">{{ talk.description }}</p>{% endif %}
+                {% if talk.slides and talk.slides != "" %}<p class="meta"><a href="{{ talk.slides | relative_url }}">Slides</a></p>{% endif %}
+              </div>
+            </li>
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p class="empty-state">Talks and seminar presentations will appear here.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="cv" class="section">
+  <div class="container section-grid">
+    <div>
+      <p class="section-number">06</p>
+      <h2>CV</h2>
+    </div>
+    <div class="section-content cv-content">
+      <p class="section-intro">{{ site.data.cv.description }}</p>
+      {% if site.data.cv.pdf and site.data.cv.pdf != "" %}
+        <a class="button" href="{{ site.data.cv.pdf | relative_url }}">Download CV</a>
+      {% else %}
+        <p class="empty-state">The CV will be available here.</p>
+      {% endif %}
+      {% if site.data.cv.updated and site.data.cv.updated != "" %}
+        <p class="meta">Last updated: {{ site.data.cv.updated }}</p>
+      {% endif %}
+    </div>
+  </div>
+</section>

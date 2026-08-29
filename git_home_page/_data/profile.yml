@@ -1,0 +1,23 @@
+name: Xiaobo Feng
+monogram: XF
+field: Mathematics
+institution: Fudan University
+email: ""
+
+introduction: >-
+  I am an undergraduate mathematics student at Fudan University. My interests
+  include p-adic geometry and, more broadly, anything related to p-adic numbers.
+
+about: >-
+  I enjoy finding concrete examples for abstract ideas and writing notes that
+  make advanced mathematics more approachable to students.
+
+facts:
+  - label: Status
+    value: Undergraduate Student
+  - label: Institution
+    value: Fudan University
+  - label: School
+    value: School of Mathematical Sciences
+  - label: Interests
+    value: p-adic geometry and p-adic numbers

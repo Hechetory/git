@@ -1,0 +1,24 @@
+title: "Xiaobo Feng | Mathematics"
+description: "Academic homepage of Xiaobo Feng, an undergraduate mathematics student at Fudan University."
+
+# GitHub Pages fills in url/baseurl automatically during the Actions build.
+# Keeping them empty also makes local preview work at http://127.0.0.1:4000/.
+baseurl: ""
+url: ""
+
+markdown: kramdown
+timezone: Asia/Shanghai
+
+collections:
+  notes:
+    output: false
+  publications:
+    output: false
+  talks:
+    output: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - MAINTENANCE.md

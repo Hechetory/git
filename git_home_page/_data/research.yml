@@ -1,0 +1,16 @@
+introduction: >-
+  My current interests center on p-adic numbers and the geometry built around
+  them. I am especially curious about how algebra, geometry, and number theory
+  meet in the p-adic setting.
+
+interests:
+  - title: p-adic numbers
+    description: >-
+      Their arithmetic, topology, and the distinctive notion of distance they
+      introduce.
+  - title: p-adic geometry
+    description: >-
+      Geometric spaces and analytic ideas developed over p-adic fields.
+  - title: Arithmetic geometry
+    description: >-
+      Connections between number-theoretic questions and geometric methods.
