@@ -3,9 +3,6 @@ name: Deploy academic homepage to Pages
 on:
   push:
     branches: [main]
-    paths:
-      - "git_home_page/**"
-      - ".github/workflows/pages.yml"
   workflow_dispatch:
 
 permissions:
