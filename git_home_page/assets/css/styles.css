@@ -173,6 +173,7 @@ h3 {
   place-items: center;
   border: 1px solid var(--line);
   border-radius: 50%;
+  object-fit: cover;
   color: var(--accent);
   font-size: 1.45rem;
 }

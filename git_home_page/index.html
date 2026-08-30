@@ -20,7 +20,15 @@ layout: default
   </div>
 
   <aside class="profile-card" aria-label="Academic information">
-    <div class="monogram" aria-hidden="true">{{ profile.monogram }}</div>
+    {% if profile.photo and profile.photo != "" %}
+      <img
+        class="monogram"
+        src="{{ profile.photo | relative_url }}"
+        alt="Portrait of {{ profile.name }}"
+      >
+    {% else %}
+      <div class="monogram" aria-hidden="true">{{ profile.monogram }}</div>
+    {% endif %}
     <dl>
       {% for item in profile.facts %}
         <div>
